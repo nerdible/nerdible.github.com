@@ -1,0 +1,446 @@
+/* Layout the CSS of the site */
+/* Let the magic happen here... */
+
+/* ------------------------ Mobile ------------------------ */
+
+body {
+	font-family: "Roboto", Arial, sans-serif;
+    color: #d9d9d9;
+    
+	background: #37393D;
+    
+    background: url('../images/bg01.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center; 
+}
+
+/* Nav and Framework */
+
+.frame__nav {
+    background: rgba(55, 57, 61, 0.81);
+}
+
+.nav-text {
+    font-family: "Karla", Arial, sans-serif;
+	font-size: .7em;
+	font-weight: 600;
+    text-align: center;
+}
+
+.nav-large {
+    font-size: 1.6em;
+    font-weight: 400;
+    margin-bottom: 10px;
+    display: block;
+}
+
+footer.nav-text {
+   padding-bottom: 15px;
+}
+
+.sig-block {
+    display: inline;
+}
+
+.sig-block:after {
+        content: " "; /* leading space to seperate div text */
+    }
+
+.nav-heart {
+	color: #CA3A3A;
+	font-size: 1.1em;
+}
+
+footer {
+    background: rgba(55, 57, 61, 0.81);
+}
+
+/* Flipbox Buttons */
+
+a:link .flipbox, a:visited .flipbox, a:hover .flipbox, a:active .flipbox {
+	text-decoration: none;
+}
+
+.flipbox {
+	position: relative;
+    margin: 0 auto;
+    margin-top: 10px;
+    margin-bottom: 10px;
+	width: 150px;
+	height: 50px;
+    
+	font-family: "Karla", Arial, sans-serif; 
+    font-size: 12px;
+	font-weight: 600;
+	text-align:center;
+}
+.flipbox p {
+	padding: 0;
+	margin: 0;
+    text-align: center;
+    line-height: 50px;
+}
+.flop, .flip {
+	position: absolute;
+    height: 50px;
+	left: 0;
+	top: 0;
+	transition: transform 0.4s ease;
+	transform-origin: center center -25px;
+	-webkit-transform-origin: center center -25px;
+	width: 100%;
+    -webkit-transform-style: preserve-3d; 
+    transform-style: preserve-3d;
+}
+.flop {
+    background-color: #d9d9d9;
+    color: #565656;
+	transform: perspective(1000px) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
+    -webkit-transform-style: preserve-3d; 
+    transform-style: preserve-3d;
+}
+.flip {
+    color: #fff;
+    font-size: 14px;
+    font-weight: 400;
+	transform: perspective(1000px) rotateX(-89deg) rotateY(0deg) rotateZ(0deg);
+    /* rotateX at -89 instead of -90 to fix the edge bleeding over*/
+    -webkit-transform-style: preserve-3d; 
+    transform-style: preserve-3d;
+}
+.flipbox:hover .flop {
+	transform: perspective(1000px) rotateX(90deg) rotateY(0) rotateZ(0deg);
+    -webkit-transform-style: preserve-3d; 
+    transform-style: preserve-3d;
+}
+.flipbox:hover .flip {
+	z-index: 99999;
+	transform: perspective(1000px) rotateX(0deg) rotateY(0deg) rotateZ(0);
+    -webkit-transform-style: preserve-3d; 
+    transform-style: preserve-3d;
+}
+.flipblue {
+    background-color: #1d6bad;
+}
+
+.flipgreen {
+    background-color: #1da7ad;  
+}
+
+/* Flexbox Nav Menu */
+
+
+.navtext:hover:after {
+   content: "";
+}
+
+.flexnav {
+	display: flex;
+	flex-flow: row wrap;
+	flex-direction: column;
+	justify-content: center;
+	padding: 0px;
+    margin: 7px;
+
+	font-family: "Karla", Arial, san serif;
+	font-weight: 400;
+    font-size: 14px;
+}
+
+
+.flexbutton span {
+	display: block;
+}
+
+.flexnav a {
+	text-decoration:none;
+}
+
+.flexbutton img {
+    width: 30px;
+}
+
+.flexnav li{
+	text-align: center;
+	text-decoration: none;
+	padding: 20px 0px;
+	margin: 0 auto;
+	list-style-type: none;
+	
+	color: #fff;
+    
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px;
+    flex-direction: row;
+    width: 100%;
+    height: 40px;
+    line-height: 0px;
+}
+
+.navicon {
+	margin: 0;
+    padding: 5px;
+    order: 1;
+}
+
+.navtext {
+	font-size: 14px;
+	padding: 5px;
+    margin: 0;
+    order: 2;
+}
+
+.flexnav a:nth-child(1):hover {
+	background: #1d6bad;
+    transition:all 0.3s ease;
+}
+
+.flexnav a:nth-child(2):hover {
+	background: #8f4b86;
+    transition:all 0.3s ease;
+}
+
+.flexnav a:nth-child(3):hover {
+	background: #1da7ad;
+    transition:all 0.3s ease;
+}
+
+.flexnav a:nth-child(4):hover {
+	background: #973556;
+    transition:all 0.3s ease;
+}
+
+/* ------------------------ Main Content ------------------------ */
+
+.frame__content {
+    font-family: "Roboto", Arial, sans-serif;
+    text-align: center;
+    color: white;
+    text-align: center;
+    font-size: 1em;
+    font-weight: 300;
+}
+
+.frame__content-content {
+    display: inline-block;
+    
+    padding: 25px 35px;
+    background: #37393d;
+    margin: 10px 0px;
+}
+
+.frame__content-emblue {
+    color: #9DD2FF;
+}
+.frame__content-empink {
+    color: #E4ABBF;
+}
+.frame__content-emaqua {
+    color: #8FDDE0;
+}
+
+.frame__content-big {
+    font-size: 3.5em;
+    font-weight: 400;
+}
+
+.frame__content-title {
+    font-size: 2.5em;
+    font-weight: 400;
+    display: block;
+    margin-bottom: 25px;
+    text-align: center;
+}
+
+
+.frame__content-subtitle {
+    font-size: 1.5em;
+    font-weight: 400;
+    display: block;
+    color: #9DD2FF;
+    text-align: center;
+}
+
+.frame__content-subsubtitle {
+    font-weight: 400;
+    display: block;
+    margin-bottom: 5px;
+    text-align: center;
+}
+
+.frame__content-date {
+    font-size: .75em;
+    font-weight: 400;
+    display: block;
+    margin-bottom: 15px;
+    color: #8fdde0;
+    text-align: center;
+}
+
+.frame__content-content img {
+    max-width: 1000px;
+    height: auto;
+    width: 100%;
+}
+
+.frame__content-button {
+    flex: 0 1 auto;
+    align-self: auto;
+    }
+
+.frame__content-content a{
+    text-decoration: none;
+    color: white;
+}
+
+.frame__content-content a:hover{
+    text-decoration: none;
+    color: #9DD2FF;
+}
+
+.contactbutton-be img{
+    background: #005cff;
+    }
+.contactbutton-in img{
+    background: #0077b5;
+    }
+
+.contactbutton {
+    text-align: center;
+    vertical-align: middle;
+    background: #37393d;
+    width: 140px;
+    margin: 0 auto;
+    padding: 10px;
+    margin-bottom: 15px;
+    display: inline-block;
+}
+
+a .contactbutton{
+    text-decoration: none;
+    color: white;
+}
+
+.frame__content a {
+    text-decoration: none;
+}
+
+a .contactbutton:hover{
+    text-decoration: none;
+    color: white;
+}
+
+
+.contactbutton img {
+    width: 100px;
+    padding:20px;
+}
+
+.contacttext {
+}
+
+.contacttext__em {
+    font-weight: 600;
+    display:block;
+    font-family: "Karla", Arial, sans-serif; 
+    font-size: 14px;
+    margin: 5px;
+}
+
+.content-thumb {
+    padding: 0px;
+    margin: 10px 20px;
+    background: none;
+}
+
+.content-thumb img {
+    border: 10px solid #37393d;
+}
+
+.cv {
+    max-width: 1000px;
+    text-align: left;
+}
+
+.cv p {
+    margin: 25px 0;
+}
+
+/* ------------------------ Desktop sorcery ------------------------ */
+
+@media (min-width: 500px) {
+ 
+    .sig-block {
+        display: block;
+    }
+    
+    .nav__top .sig-block:after {
+        content: ""; /* remove leading space because of display:block */
+    }
+    
+    .flexnav li{
+        height: 140px;
+        justify-content: center;
+        flex-direction: column;
+    }
+
+    .flexbutton img {
+        width: 75px; 
+    } 
+
+    .navtext {
+        font-size: 1em;
+        padding: 15px;
+    }
+    
+    .frame__content {
+        font-size: 1.3em;
+    }
+    
+}
+
+/* ------------------------ Portrait sorcery ------------------------ */
+
+@media (max-height: 750px) {
+	
+	.flexnav {
+		flex-direction: column;
+	}
+	
+	.flexnav li {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		padding: 0px;
+		flex-direction: row;
+		width: 100%;
+		line-height: 0px;
+		height: 40px;
+	}
+	.flexbutton img {
+        width: 30px;
+	}
+	
+	.navicon {
+		margin: 0;
+		order: 1;
+        padding-left: 5px;
+	}
+	
+	.navtext {
+		margin: 0;
+		order: 2;
+	}
+	
+	.flexbutton span {
+		text-align: left;
+	}
+    
+    .frame__content {
+        font-size: 1.0em;
+    }
+}

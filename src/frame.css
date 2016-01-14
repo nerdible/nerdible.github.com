@@ -1,0 +1,92 @@
+/* Layout the framework of the site */
+/* Layout the controls for touch */
+/* DO NOT MODIFY, let the magic happen elsewhere... */
+
+/* Mobile first... then queries for desktop */
+
+html {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    min-height: 350px;
+}
+
+.frame {
+    display: flex;
+    height: 100%;
+    flex-direction: column;
+}
+
+.frame__body {
+    display: flex;
+    flex: 1 0 auto;
+    flex-direction: column;
+}
+
+.frame__content {
+    padding: 1em;
+}
+
+.frame__nav {
+    padding: 1em .2em;
+    order: -1;
+}
+
+footer {
+    flex: none;
+}
+
+@media (min-width: 500px) {
+    .frame__body {
+        flex-direction: row;
+        flex: auto;
+        flex-wrap: wrap;
+    }
+    .frame__content {
+        flex: 1;
+    }
+    .frame__nav {
+        /* column width is the px */
+        flex: 0 0 170px;
+    }
+    footer {
+        display: none;
+    }
+}
+
+/* Flexboxes for nav area */
+
+
+.nav {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.nav__top {
+
+}
+
+.nav__bottom {
+
+    display: none;
+}
+
+@media (min-width: 500px) {
+    .nav__bottom {
+        display: inline;
+    }
+}
+
+/* Remove 300ms delay on touch screens */
+html {
+  -ms-touch-action: manipulation;
+  touch-action: manipulation;
+}
+
+/* Force apply antialiasing to fonts */
+html * {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -ms-font-smoothing: grayscale;
+}
