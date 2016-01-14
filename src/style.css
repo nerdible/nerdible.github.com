@@ -7,8 +7,7 @@ body {
 	font-family: "Roboto", Arial, sans-serif;
     color: #d9d9d9;
     
-	background: #37393D;
-    
+    background-color: #37393D;
     background: url('../images/bg01.jpg');
     background-size: cover;
     background-repeat: no-repeat;
