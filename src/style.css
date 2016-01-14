@@ -3,16 +3,18 @@
 
 /* ------------------------ Mobile ------------------------ */
 
+html { 
+  background-color: #37393D;
+  background: url('../images/bg01.jpg') no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
 body {
 	font-family: "Roboto", Arial, sans-serif;
     color: #d9d9d9;
-    
-    background-color: #37393D;
-    background: url('../images/bg01.jpg');
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-position: center; 
 }
 
 /* Nav and Framework */
