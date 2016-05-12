@@ -2,81 +2,7 @@
 /* Layout the controls for touch */
 /* DO NOT MODIFY, let the magic happen elsewhere... */
 
-/* Mobile first... then queries for desktop */
-
-html {
-    height: 100%;
-    margin: 0;
-    padding: 0;
-    min-height: 350px;
-}
-
-.frame {
-    display: flex;
-    height: 100%;
-    flex-direction: column;
-}
-
-.frame__body {
-    display: flex;
-    flex: 1 0 auto;
-    flex-direction: column;
-}
-
-.frame__content {
-    padding: 1em;
-}
-
-.frame__nav {
-    padding: 1em .2em;
-    order: -1;
-}
-
-footer {
-    flex: none;
-}
-
-@media (min-width: 500px) {
-    .frame__body {
-        flex-direction: row;
-        flex: auto;
-        flex-wrap: wrap;
-    }
-    .frame__content {
-        flex: 1;
-    }
-    .frame__nav {
-        /* column width is the px */
-        flex: 0 0 170px;
-    }
-    footer {
-        display: none;
-    }
-}
-
-/* Flexboxes for nav area */
-
-
-.nav {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-}
-
-.nav__top {
-
-}
-
-.nav__bottom {
-
-    display: none;
-}
-
-@media (min-width: 500px) {
-    .nav__bottom {
-        display: inline;
-    }
-}
+/* ------------------------ Touch ------------------------ */
 
 /* Remove 300ms delay on touch screens */
 html {
@@ -89,4 +15,152 @@ html * {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   -ms-font-smoothing: grayscale;
+}
+
+/* -------------------- Gettin around -------------------- */
+
+#header {
+    background-color: #37393D;
+    position: fixed;
+    overflow: hidden;
+    height: 50px;
+    width: 100%;
+    z-index: 1000;
+}
+
+.header__nav {
+	padding: 0px;
+    margin: 0px;
+    height: 100%;
+}
+
+.header__nav__ul {
+    list-style-type: none;
+    padding: 0px;
+    margin: 0px;
+    height: 100%;
+    text-align: left;
+}
+
+.header__nav__ul li {
+	display: inline-block;
+    text-align: center;
+    vertical-align: middle; 
+    
+    width: 50px;
+    height: 100%;
+    line-height: 45px;
+}
+
+.header__nav__ul a {
+
+}
+
+.header__nav__ul img {
+    width: 40px;
+    vertical-align: middle; 
+}
+
+.header__nav li:nth-child(1):hover {
+	background: #1d6bad;
+    -webkit-transition: all 0.3s ease-out;
+    -moz-transition: all 0.3s ease-out;
+    -o-transition: all 0.3s ease-out;
+    transition:all 0.3s ease;
+}
+
+.header__nav li:nth-child(2):hover {
+	background: #8f4b86;
+    -webkit-transition: all 0.3s ease-out;
+    -moz-transition: all 0.3s ease-out;
+    -o-transition: all 0.3s ease-out;
+    transition:all 0.3s ease;
+}
+
+.header__nav li:nth-child(3):hover {
+	background: #1da7ad;
+    -webkit-transition: all 0.3s ease-out;
+    -moz-transition: all 0.3s ease-out;
+    -o-transition: all 0.3s ease-out;
+    transition:all 0.3s ease;
+}
+
+.header__nav li:nth-child(4):hover {
+	background: #973556;
+    -webkit-transition: all 0.3s ease-out;
+    -moz-transition: all 0.3s ease-out;
+    -o-transition: all 0.3s ease-out;
+    transition:all 0.3s ease;
+}
+
+.header__nav__ul li a{ cursor: pointer; }
+
+.contentsection {
+  display: none;
+}
+.contentsection:first-of-type {
+  display: block;
+}
+
+/* -------------------- Footnotes -------------------- */
+
+#footer {
+    position: fixed;
+    height: 30px;
+    width: 100%;
+    bottom: 0;
+    z-index: 2001;
+
+    background-color: #37393D;
+    display: inline-block;
+    
+    font-family: "Karla", Arial, sans-serif; 
+    font-size: 13px;
+    font-weight: 100;
+    line-height: 30px;
+    color: #969DAB;
+    
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.sig-block {
+    text-transform: uppercase;
+    flex: 0 1 auto;
+    padding: 0 10px;
+}
+
+.sig-heart {
+	color: #CA3A3A;
+	font-size: 1.1em;
+}
+
+#footer a {
+    color: #969DAB;
+    text-decoration: none;
+    -webkit-transition: color 0.3s ease-out;
+    -moz-transition: color 0.3s ease-out;
+    -o-transition: color 0.3s ease-out;
+    transition: color 0.3s ease-out;
+}
+#footer a:hover {
+    color: white;
+}
+
+/* ----------------- Automagical Things ----------------- */
+
+@media (max-width: 650px) {
+    #footer {
+        height: 60px;
+        display: block;
+        text-align: center;
+    }
+
+    .header__nav__ul {
+        text-align: center;
+    }
+    
 }
