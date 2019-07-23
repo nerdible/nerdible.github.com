@@ -1,222 +1,161 @@
-/* Layout the CSS of the site */
 /* Let the magic happen here... */
 
-body {
-	font-family: "Source Sans Pro", Arial, sans-serif;
-    color: #d9d9d9;
-    
-	background: #37393D;
-    
-    background: url('../images/bgg.PNG');
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-position: center; 
+/* BORDER --------------------------------------- */
+
+#border--top, #border--bottom, #border--left, #border--right {
+  background: #232425;
+  position: fixed;
 }
 
-/* ------------------------ Main Content ------------------------ */
-
-.frame__content {
-    font-family: "Source Sans Pro", Arial, sans-serif;
-    font-weight: 300;
-    font-size: 1.5em;
-    padding-top: 70px;
-    padding-left: 10vw;
-    padding-right: 10vw;
-    max-width: 800px;
-    margin: 0 auto;
+#border--left, #border--right {
+  top: 0;
+  bottom: 0;
+  width: 15px;
 }
 
-.frame__content-item {
-    color: white;
-    text-align: center;
-    font-weight: 300;
-    display: inline-block;
-    background: #37393d;
-    text-align: left;
-    margin: 5px 0;
-    padding: 20px;
+#border--left {
+  left: 0;
 }
 
-.frame__content-item img{
-    max-width: 1000px;
-    height: auto;
-    width: 100%;
-    padding: 0;
+#border--right {
+  right: 0;
 }
 
-.frame__content-item-big {
-    font-size: 2em;
-    font-weight: 400;
-    }
-
-.frame__content-emblue {
-    color: #9DD2FF;
-}
-.frame__content-empink {
-    color: #E4ABBF;
-}
-.frame__content-emaqua {
-    color: #8FDDE0;
-}
-.frame__content-embold {
-    font-weight: 600;
+#border--top, #border--bottom {
+  left: 0;
+  right: 0;
+  height: 15px;
 }
 
-.nopad {
-    padding: 0;
+#border--top {
+  top: 0;
 }
 
-.frame__gallery {
-    padding-top: 70px;
-    padding-left: 5vw;
-    padding-right: 5vw;
-    max-width: 90vw;
-    margin: 0 auto;
-    text-align: center;
-    margin-bottom: 100px;
+#border--bottom {
+  bottom: 0;
 }
 
-.gallery-thumb {
-    text-align: center;
-    display: inline-block;
-    background: #37393d;
-    margin: 5px;
-    padding: 10px;
+/* MAIN BODY ---------------------------------------------- */
+
+html {
+  font-family: Roboto, Arial, sans-serif;
+  font-weight: 500;
+  font-size: 1em;
+  line-height: 1.4;
+  color: #232425;
+  background-color: #eaeaea;
 }
 
-.gallery-thumb img {
-    max-width: 1000px;
-    height: auto;
-    width: 100%;
+::-moz-selection {
+  background: #ea88b0;
+  text-shadow: none;
+  color: #232425;
 }
 
-.contactbutton-be img{
-    background: #005cff;
-    }
-.contactbutton-in img{
-    background: #0077b5;
-    }
-
-.contactbutton {
-    text-align: center;
-    vertical-align: middle;
-    background: #37393d;
-    width: 140px;
-    margin: 0 auto;
-    padding: 10px;
-    margin-bottom: 15px;
-    display: inline-block;
+::selection {
+  background: #ea88b0;
+  text-shadow: none;
+  color: #232425;
 }
 
-a .contactbutton{
-    text-decoration: none;
-    color: white;
+/* NAVIGATION ---------------------------------------------- */
+
+nav {
+  position: relative;
+  min-height: 100%;
+  overflow-y: hidden;
+  margin: 15px;
+  opacity: 0;
 }
 
-.frame__content a {
-    text-decoration: none;
+#navlinks {
+  float: right;
+  line-height: 75px;
+  margin-right: 10px;
+  text-transform: uppercase;
+  font-family: "Montserrat", Arial, sans-serif;
+  font-weight: 700;
+  font-size: 0.75em;
 }
 
-a .contactbutton:hover{
-    text-decoration: none;
-    color: white;
+#navlinks a {
+  text-decoration: none;
+  color: #232425;
+  margin-right: 20px;
 }
 
-
-.contactbutton img {
-    width: 100px;
-    padding:20px;
+#navlinks a:hover {
+  text-decoration: none;
+  color: #4ac6d7;
 }
 
-.contacttext {
+/* CONTENT ---------------------------------------------- */
+
+#content {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  -webkit-transition: opacity 2s ease-in;
+  -webkit-transition--moz-transition: opacity 2s ease-in;
+  -webkit-transition--o-transition: opacity 2s ease-in;
+  -webkit-transition--ms-transition: opacity 2s ease-in;
+  -webkit-transition-transition: opacity 2s ease-in;
 }
 
-.contacttext__em {
-    font-weight: 600;
-    display:block;
-    font-family: "Karla", Arial, sans-serif; 
-    font-size: 14px;
-    margin: 5px;
+#content div {
+  margin: 20px;
+  padding: 30px;
+  display: flex;
+  flex: 1;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+  opacity: 0;
 }
 
-.cv {
-    max-width: 1000px;
-    text-align: left;
-    margin-top: 70px;
+h1 {
+  color: #232425;
+  font-family: "Montserrat", Arial, sans-serif;
+  font-weight: 700;
+  font-size: 3em;
+  opacity: 1;
+  margin-top: 120px;
 }
 
-.cv p {
-    margin: 25px 0;
+h2 {
+  color: #232425;
+  font-family: "Montserrat", Arial, sans-serif;
+  font-weight: 700;
+  font-size: 2em;
+  opacity: 0;
+  margin: 0px;
 }
 
-
-.frame__cv-title {
-    font-size: 2em;
-    font-weight: 400;
-    display: block;
-    margin-bottom: 25px;
-    text-align: center;
+p {
+  text-transform: uppercase;
+  font-family: "Montserrat", Arial, sans-serif;
+  font-weight: 700;
+  font-size: 0.75em;
+  opacity: 0;
+  margin: 0px;
+  margin-bottom: 20px;
 }
 
+/* SVG ---------------------------------------------- */
 
-.frame__cv-subtitle {
-    font-size: 1.5em;
-    font-weight: 400;
-    display: block;
-    color: #9DD2FF;
-    text-align: center;
+.icon_logo svg {
+  width: 75px;
+  fill: #000000;
 }
 
-.frame__cv-subsubtitle {
-    font-weight: 400;
-    display: block;
-    margin-bottom: 5px;
-    text-align: center;
+.icon_SM svg {
+  width: 75px;
+  fill: #232425;
 }
 
-.frame__cv-date {
-    font-size: .75em;
-    font-weight: 400;
-    display: block;
-    margin-bottom: 15px;
-    color: #8fdde0;
-    text-align: center;
-}
-
-.spacer {
-    min-height: 100px;
-    min-width: 1px;
-}
-    
-.frame__content-item a{
-    text-decoration: none;
-    color: white;
-}
-
-.frame__content-item a:hover{
-    text-decoration: none;
-    color: #9DD2FF;
-}
-
-
-
-
-/* ----------------- Automagical Things ----------------- */
-
-@media (max-width: 650px) {
-    
-    body {
-        font-size: .8em;
-    }
-    
-    .frame__content-item-big {
-    font-size: 2em;
-    }
-    
-    .frame__cv-title {
-    font-size: 2em;
-    }
-    
-    
+.icon_SM:hover svg {
+  fill: #ea88b0;
 }
