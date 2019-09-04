@@ -159,3 +159,7 @@ p {
 .icon_SM:hover svg {
   fill: #ea88b0;
 }
+
+a svg {
+  text-decoration:none;
+}
